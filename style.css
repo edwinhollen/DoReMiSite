@@ -1,0 +1,59 @@
+/**
+Color palette
+yellow  = #e8c95d
+red     = #d16b54
+green   = #a9d8c8
+black   = #433447
+gray    = #b9b09f
+**/
+
+body{
+  font-family: sans-serif;
+  background: #b9b09f;
+  color: #433447;
+  image-rendering: pixelated;
+}
+
+header, section{
+  border-radius: 4px;
+  margin: 2px 0;
+  padding: 0 8px;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.container > *{
+  /*flex-basis: auto;*/
+  box-sizing: border-box;
+}
+
+header.main{
+  position: relative;
+  text-align: center;
+  background: #d16b54;
+  overflow: hidden;
+}
+
+header img.violin{
+  position: absolute;
+  transform-origin: top left;
+  transform: scale(2.0, 2.0) rotate(10deg);
+  left: 0;
+  top: -20px;
+
+  opacity: 0.33;
+}
+
+section{
+  background: #a9d8c8;
+}
+
+section.special{
+  background: #e8c95d;
+}
