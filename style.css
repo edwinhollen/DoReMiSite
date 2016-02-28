@@ -1,60 +1,115 @@
-/**
-Color palette
-yellow  = #e8c95d
-red     = #d16b54
-green   = #a9d8c8
-black   = #433447
-gray    = #b9b09f
-**/
+/* palette
+
+	red		#d83b3b
+	orange	#d5803a
+	yellow	#d5c83a
+	lgreen	#9cd53a
+	mgreen	#54d53a
+	tgreen	#3ad566
+	teal	#3ad5af
+	lblue	#3ab6d5
+	blue	#3a6ed5
+	bv		#4c3ad5
+	violet	#953ad5
+	magenta	#d53a88
+
+*/
+
+
 
 body{
-  font-family: sans-serif;
-  background: #b9b09f;
-  color: #433447;
-  image-rendering: pixelated;
+	display: flex;
+	justify-content: center;
+	
+	font-family: sans-serif;
 }
 
-header, section{
-  border-radius: 4px;
-  margin: 2px 0;
-  padding: 0 8px;
+hr{
+	border: none;
+	border-top: 1px solid hsl(0,0%,90%);
 }
 
 .container{
-  width: 80%;
-  max-width: 720px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-
+	width: 80%;
 }
 
-.container > *{
-  /*flex-basis: auto;*/
-  box-sizing: border-box;
+/* colors */
+
+.text.red{ color: #d83b3b; }
+.text.orange{ color:#d5803a;}
+.text.yellow{ color:#d5c83a;}
+.text.green1{ color:#9cd53a;}
+.text.green2{ color:#54d53a;}
+.text.green3{ color:#3ad566;}
+.text.teal{ color:#3ad5af;}
+.text.blue1{ color:#3ab6d5;}
+.text.blue2{ color:#3a6ed5;}
+.text.blue3{ color:#4c3ad5;}
+.text.violet{ color:#953ad5;}
+.text.magenta{ color:#d53a88;}
+
+.theme{
+	border-radius: 2px;
+	display: block;
+	padding: 8px;
 }
 
-header.main{
-  position: relative;
-  text-align: center;
-  background: #d16b54;
-  overflow: hidden;
+.theme.green{
+	background: #9cd53a;
+	color: white;
 }
 
-header.main img.violin{
-  position: absolute;
-  transform-origin: center center;
-  transform: scale(2.0, 2.0) rotate(5deg);
-  left: 30%;
-  top: 30%;
+.theme.violet{
+	background: #953ad5;
+	color: white;
+}
+	
 
-  opacity: 0.2;
+.logo{
+	margin: 4em 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	
+	height: 175px;
+}
+.logo img:nth-of-type(1){
+	animation-delay: 0;
 }
 
-section{
-  background: #a9d8c8;
+.logo img:nth-of-type(2){
+	animation-delay: 0.25s;
+}
+.logo img:nth-of-type(3){
+	animation-delay: 0.5s;
+}
+.logo img{
+	height: 100%;
+	animation: popin 0.35s;
+	opacity: 1;
 }
 
-section.special{
-  background: #e8c95d;
+
+.logoCaption{
+	text-align: center;
+	font-size: 1.4em;
+	color: hsl(0, 0%, 65%);
+}
+
+.logoCaption p img{
+	height: 2.5em;
+	vertical-align: bottom;
+	display: inline-block;
+}
+
+.about section{
+	color: hsl(0, 0%, 30%);
+}
+
+@keyframes popin{
+	0%{ transform: scale(0) translate(0, 0); }
+	50%{ transform: scale(1.2) translate(0, -10%); }
+	100%{ transform: scale(1.0) translate(0, 0); }
 }
