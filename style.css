@@ -33,6 +33,11 @@ hr{
 	width: 80%;
 }
 
+.fancy{
+	font-family: 'Georgia', serif;
+	font-style: italic;
+}
+
 /* colors */
 
 .text.red{ color: #d83b3b; }
@@ -106,6 +111,16 @@ hr{
 
 .about section{
 	color: hsl(0, 0%, 30%);
+}
+
+footer, footer a{
+	color: hsl(0, 0%, 50%);
+}
+
+footer{
+	text-align: center;
+	margin-top: 5em;
+	font-size: 0.9em;
 }
 
 @keyframes popin{
