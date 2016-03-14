@@ -11,6 +11,8 @@
 	<!-- place favicon.ico in the root directory -->
 	
 	<link rel="stylesheet" href="style.css">
+	
+	<script src="jquery-2.2.1.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -35,12 +37,14 @@
 	<section class="logoCaption">
 		<p>An educational music puzzle and ear training game</p>
 		<p>
-			<img src="images/apple.png" alt="Logo resembling an apple">
-			<img src="images/android.png" alt="Logo resembling a green alien">
-			<img src="images/windows.png" alt="Logo resembling a colorful flag">
-			<img src="images/linux.png" alt="Logo resembling a happy penguin">
+			
 		</p>
-		<p><em class="text green2">Free and open-source</em> for iOS, Android, Windows, Mac OS X, and Linux</p>
+		<p>
+			<a href="https://github.com/edwinhollen/DoReMi/releases" class="latestVersionButton button green"><img src="images/apple.png" alt="Logo resembling an apple"> <img src="images/android.png" alt="Logo resembling a green alien"> <img src="images/windows.png" alt="Logo resembling a colorful flag"> <img src="images/linux.png" alt="Logo resembling a happy penguin"> <span>Download the latest version</span></a>
+		</p>
+		<p>
+			<span class="tiny">Latest version: <span class="latestVersion"></span> released <span class="latestVersionRelease"></span></span>
+		<p><em class="text green1">Free and open-source</em> for iOS, Android, Windows, Mac OS X, and Linux</p>
 	</section>
 	<hr>
 	<div class="about">
@@ -83,6 +87,18 @@
 		<p><a href="https://www.github.com/edwinhollen">github.com/edwinhollen</a> <a href="https://www.linkedin.com/in/edwinhollen">linkedin.com/in/edwinhollen</a></p>
 	</footer>
 </div>
+
+<script>
+	'use strict';
+	// get the download to the latest version on github
+	$.getJSON('https://api.github.com/repos/edwinhollen/DoReMi/releases', function(data){
+		var latest = data[0];
+		$('.latestVersion').text(latest.tag_name);
+		$('.latestVersionRelease').text((new Date(latest.created_at)).toLocaleString());
+		$('.latestVersionButton').attr('href', latest.html_url);
+	});
+
+</script>
 	
 <script>
 

@@ -53,6 +53,8 @@ hr{
 .text.violet{ color:#953ad5;}
 .text.magenta{ color:#d53a88;}
 
+
+
 .theme{
 	border-radius: 2px;
 	display: block;
@@ -180,10 +182,42 @@ hr{
 	color: hsl(0, 0%, 65%);
 }
 
+/*
 .logoCaption p img{
 	height: 2.5em;
 	vertical-align: bottom;
 	display: inline-block;
+}
+
+*/
+
+a.button{
+	text-decoration: none;
+}
+
+.button{
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+.button.green{
+	background: linear-gradient(#9cd53a, #54d53a);
+	color: white;
+	padding: 0.75em;
+	border-radius: 4px;
+	text-shadow: hsla(0,0%,0%,0.2) 0 0.1em 0;
+	box-shadow: hsla(0,0%,0%,0.2) 0 0.1em 0.5em, inset hsla(0,0%,0%,0.08) 0 -0.15em 0;
+}
+
+.button img{
+	display: inline-block;
+	height: 2em;
+	vertical-align: middle;
+}
+
+.tiny{
+	font-size: 0.65em;
 }
 
 .about section{
