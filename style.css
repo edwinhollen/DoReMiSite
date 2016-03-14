@@ -220,6 +220,10 @@ a.button{
 	font-size: 0.65em;
 }
 
+p iframe{
+	display: block;
+}
+
 .about section{
 	color: hsl(0, 0%, 30%);
 }

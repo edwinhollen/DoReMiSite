@@ -37,19 +37,23 @@
 	<section class="logoCaption">
 		<p>An educational music puzzle and ear training game</p>
 		<p>
-			
-		</p>
-		<p>
 			<a href="https://github.com/edwinhollen/DoReMi/releases" class="latestVersionButton button green"><img src="images/apple.png" alt="Logo resembling an apple"> <img src="images/android.png" alt="Logo resembling a green alien"> <img src="images/windows.png" alt="Logo resembling a colorful flag"> <img src="images/linux.png" alt="Logo resembling a happy penguin"> <span>Download the latest version</span></a>
 		</p>
 		<p>
 			<span class="tiny">Latest version: <span class="latestVersion"></span> released <span class="latestVersionRelease"></span></span>
-		<p><em class="text green1">Free and open-source</em> for iOS, Android, Windows, Mac OS X, and Linux</p>
+		</p>
+		<p>
+			<em class="text green1">Free and open-source</em> for iOS, Android, Windows, Mac OS X, and Linux
+		</p>
 	</section>
 	<hr>
 	<div class="about">
 		<section>
 			<h2>What is DoReMi?</h2>
+			<p>
+				<!-- <video data-gyfcat="GratefulAmbitiousEarthworm"></video> -->
+			</p>
+			
 			<p>
 			DoReMi is a music puzzle game designed to promote music education and ear training. DoReMi is an attempt to form an approachable bridge between ear training in traditional/classical music education, and casual puzzle video game audiences.
 			</p>
@@ -67,7 +71,7 @@
 		</section>
 		<section>
 			<h2>How much does DoReMi cost?</h2>
-			<p><strong>DoReMi is completely free!</strong> Not only that, but DoReMi is also open-source, and available under the MIT license.</p>
+			<p><strong>DoReMi is completely free!</strong> Not only that, but DoReMi is open-source, and available under the MIT license.</p>
 			<p>Complete source code on GitHub: <a href="https://github.com/edwinhollen/doremi">github.com/edwinhollen/doremi</a></p>
 		</section>
 		
@@ -97,6 +101,21 @@
 		$('.latestVersionRelease').text((new Date(latest.created_at)).toLocaleString());
 		$('.latestVersionButton').attr('href', latest.html_url);
 	});
+	
+	/*
+	$('video[data-gyfcat]').each(function(k, el){
+		var gyfcatName = el.getAttribute('data-gyfcat');
+		$.getJSON('https://gfycat.com/cajax/get/'+gyfcatName, function(data){
+			var data = data.gfyItem;
+			[data.mp4Url, data.webmUrl, data.webpUrl].forEach(function(v){
+				console.log(v);
+				var source = $(el).add('source');
+				source.attr('src', v);
+			});
+		});
+	});
+	
+	*?
 
 </script>
 	
