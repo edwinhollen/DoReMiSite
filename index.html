@@ -98,7 +98,7 @@
 	$.getJSON('https://api.github.com/repos/edwinhollen/DoReMi/releases', function(data){
 		var latest = data[0];
 		$('.latestVersion').text(latest.tag_name);
-		$('.latestVersionRelease').text((new Date(latest.created_at)).toLocaleString());
+		$('.latestVersionRelease').text((new Date(latest.created_at)).toLocaleDateString());
 		$('.latestVersionButton').attr('href', latest.html_url);
 	});
 	
